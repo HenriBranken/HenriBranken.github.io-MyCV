@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", sans-serif;
+}
+
+div.myAccordion ul {
+  margin-left: 1em;
+}
+
+body a:visited {
+  color: rgb(49, 44, 45);
+}
+
+section.about-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: repeat;
+  background-image: url("../images/traditional-mesh.jpg");
+  overflow: hidden;
+  background-attachment: fixed;
+  opacity: 1;
+  z-index: -10;
+}
+
+div.about-rest-of-page {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  background-color: rgb(235, 206, 152);
+  border: 2px solid rgb(49, 44, 45);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+div.intro {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  background-color: rgb(235, 206, 152);
+  border: 2px solid rgb(49, 44, 45);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  /*+ is the adjacent sibling selector.*/
+  /*Did you Know---------------------------------------------------------------------------*/
+  /*LANGUAGES------------------------------------------------------------------------------*/
+}
+div.intro > h1 {
+  color: rgb(49, 44, 45);
+  margin-bottom: 0.5rem;
+}
+div.intro > h1 + p::first-letter {
+  color: rgb(235, 206, 152);
+  background-color: rgb(49, 44, 45);
+  border-radius: 2px;
+  box-shadow: 7px 7px 0 rgb(210, 142, 83);
+  font-size: 3.5rem;
+  padding: 25px 10px;
+  margin-right: 10px;
+  float: left;
+}
+div.intro > p {
+  text-align: justify;
+  color: rgb(49, 44, 45);
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+div.intro > p > img {
+  float: right;
+  margin: 0 0 0 20px;
+  height: 250px;
+  border-radius: 5px;
+}
+div.intro section.dyk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  right: -64px;
+  top: 150px;
+  margin-right: 0px;
+  transition: margin-right 500ms ease;
+}
+div.intro section.dyk > div.dyk-txt {
+  z-index: -1;
+  background-color: rgb(235, 206, 152);
+  color: rgb(49, 44, 45);
+  font-size: 1.4rem;
+  line-height: 52px;
+  padding: 0 10px;
+}
+div.intro section.dyk > div.dyk-btn > button {
+  cursor: pointer;
+}
+div.intro section.dyk > div.dyk-btn > button > i.fa-language {
+  font-size: 3rem;
+}
+div.intro section.langs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /*----------------------------*/
+  position: absolute;
+  right: -52px;
+  top: 70px;
+  margin-right: 0px;
+  transition: margin-right 500ms ease;
+}
+div.intro section.langs > div.langs-btn {
+  padding: 0;
+  margin: 0;
+}
+div.intro section.langs > div.langs-btn > button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+div.intro section.langs > div.langs-btn > button > i.fa-circle-info {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+div.intro section.langs > div.langs-txt {
+  z-index: -1;
+  background-color: rgb(235, 206, 152);
+  color: rgb(49, 44, 45);
+  font-size: 1.4rem;
+  line-height: 51px;
+  padding: 0 10px;
+}
+
+/*MERN ---------------------------------------------------------------------------------------*/
+div.mern {
+  display: grid;
+  grid-template-columns: repeat(4, 185px);
+  grid-gap: 10px 10px;
+  justify-items: center;
+  justify-content: center;
+}
+div.mern > div.char {
+  transition: all 500ms ease;
+}
+div.mern > div.char.active {
+  border: 1px solid #fff;
+  box-shadow: 0 0 15px #fff;
+}
+div.mern > div.fig > img {
+  transition: all 500ms ease;
+}
+div.mern > div.fig > img.active {
+  border: 1px solid #fff;
+  box-shadow: 0 0 15px #fff;
+}
+div.mern > div.char {
+  text-align: center;
+  margin: 0 0;
+  border-radius: 50%;
+  height: 185px;
+  width: 185px;
+  font-size: 6rem;
+  line-height: 11rem;
+  font-family: "Cinzel Decorative", cursive;
+  transition: all 500ms ease;
+}
+div.mern > div.char.m-char {
+  border-radius: 50%;
+  color: rgb(2, 52, 48);
+  background: radial-gradient(rgb(255, 255, 255), rgb(2, 52, 48));
+}
+div.mern > div.char.e-char {
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  background: radial-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+}
+div.mern > div.char.r-char {
+  border-radius: 50%;
+  color: rgb(0, 216, 255);
+  background: radial-gradient(rgb(34, 34, 34), rgb(0, 216, 255));
+}
+div.mern > div.char.n-char {
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(59, 135, 57);
+  background: radial-gradient(rgb(59, 135, 57), rgb(255, 255, 255));
+}
+div.mern > div.fig {
+  /*For pictures that have an intercepted background (MongoDB).*/
+  margin: 0 0;
+  height: 185px;
+  width: 185px;
+  transition: all 500ms ease;
+}
+div.mern > div.fig > img {
+  width: 185px;
+  height: 185px;
+  /*Effectively set the size of each image.*/
+  border-radius: 50%;
+}
+
+div.mern-wrapper {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  background-color: rgb(235, 206, 152);
+  border: 2px solid rgb(49, 44, 45);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 500ms ease;
+}
+
+/*Full-Stack Title-------------------------------------------------------------------------- */
+div.fullstack {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 0px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+div.fullstack > div.fs {
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  width: 40px;
+}
+div.fullstack > div.fs:nth-child(even) {
+  color: rgb(210, 142, 83);
+  background-color: rgb(49, 44, 45);
+}
+div.fullstack > div.fs:nth-child(odd) {
+  color: rgb(49, 44, 45);
+  background-color: rgb(210, 142, 83);
+}
+div.fullstack > div.fs.fs-04, div.fullstack > div.fs.fs-10 {
+  background-color: initial;
+  border: initial;
+}
+
+/* THE ACCORDION ---------------------------------------------------------------------------- */
+div.yyyy-entry {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-heading {
+  padding: 15px;
+  margin: 10px 0 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+}
+div.yyyy-entry > div.yyyy-heading.active {
+  border: 2px solid rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-heading > span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-description:not(.active) {
+  display: none;
+}
+div.yyyy-entry > div.yyyy-description {
+  padding: 15px;
+}
+div.yyyy-entry > div.yyyy-description > p, div.yyyy-entry > div.yyyy-description > ul > li {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: rgb(49, 44, 45);
+  text-align: justify;
+}
+
+/* THE NETWORKING ICONS --------------------------------------------------------------------- */
+section.network-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(235, 206, 152);
+  border-left: 2px solid rgb(49, 44, 45);
+  border-top: 2px solid rgb(49, 44, 45);
+  border-bottom: 2px solid rgb(49, 44, 45);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+section.network-me > div.network-icon {
+  padding: 20px;
+  transition: all 0.8s ease;
+}
+section.network-me > div.network-icon > a {
+  text-decoration: none;
+  color: rgb(49, 44, 45);
+  font-size: 2rem;
+}
+section.network-me > div.network-icon:hover {
+  transform: rotate(720deg);
+}
+
+/* THE VERTICAL DROPDOWN MENU ----------------------------------------------------------------------- */
+section.skillset {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgb(235, 206, 152);
+  width: 300px;
+  border-top: 2px solid rgb(49, 44, 45);
+  border-right: 2px solid rgb(49, 44, 45);
+  border-bottom: 2px solid rgb(49, 44, 45);
+  border-top-right-radius: 30px;
+  /*HOVERING EFFECTS------------------------------*/
+}
+section.skillset a {
+  text-decoration: none;
+  color: rgb(49, 44, 45);
+}
+section.skillset h1.skillset {
+  border-top-right-radius: 28px;
+  font-size: 2.5rem;
+  padding: 10px;
+  border-bottom: 1px solid rgb(49, 44, 45);
+  background-color: rgb(49, 44, 45);
+  color: rgb(235, 206, 152);
+}
+section.skillset ul, section.skillset ul.d-menu-1, section.skillset ul.d-menu-2 {
+  list-style: none;
+  /*Remove the bullet styling from all the <ul>s.*/
+}
+section.skillset ul:not(ul.d-menu-1, ul.d-menu-2) {
+  background-color: rgb(235, 206, 152);
+}
+section.skillset ul.d-menu-1 {
+  background-color: rgba(210, 142, 83, 0.8);
+}
+section.skillset ul.d-menu-2 {
+  background-color: rgb(235, 206, 152);
+}
+section.skillset li.li-level-1 {
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 50px;
+  padding: 0;
+  border-bottom: 1px dotted rgb(49, 44, 45);
+  display: block;
+}
+section.skillset li.li-level-1 > a {
+  padding-left: 15px;
+}
+section.skillset li.li-level-1.dropdown-1 > a > i.fa.fa-angle-right.dropdown {
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  margin: 17px;
+  text-align: middle;
+  transition: transform 500ms ease;
+}
+section.skillset li.li-level-1.dropdown-1 > a > i.fa.fa-angle-right.dropdown.rotate {
+  transform: rotate(90deg);
+  transition: transform 500ms ease;
+}
+section.skillset li.li-level-2 {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0rem;
+  text-transform: none;
+  font-weight: 470;
+  line-height: 40px;
+  padding: 0;
+}
+section.skillset li.li-level-2.dropdown-2 {
+  font-weight: 900;
+}
+section.skillset li.li-level-2 > a {
+  padding-left: 30px;
+}
+section.skillset li.li-level-2.dropdown-2 > a > i.fa.fa-angle-right.dropdown {
+  font-size: 12px;
+  position: absolute;
+  right: 25px;
+  margin: 13px;
+  text-align: middle;
+  transition: transform 500ms ease;
+}
+section.skillset li.li-level-2.dropdown-2 > a > i.fa.fa-angle-right.dropdown.rotate {
+  font-size: 12px;
+  transform: rotate(90deg);
+  transition: transform 500ms ease;
+}
+section.skillset li.li-level-2:not(li.li-level-2 *) {
+  border-bottom: 1px solid rgb(49, 44, 45);
+}
+section.skillset li.li-level-3 {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0rem;
+  text-transform: none;
+  font-weight: 470;
+  line-height: 40px;
+  padding: 0;
+}
+section.skillset li.li-level-3 > a {
+  padding-left: 45px;
+}
+section.skillset li.li-level-3:not(li.li-level-3 *) {
+  border-bottom: 1px solid rgb(49, 44, 45);
+}
+section.skillset li.li-level-1.dropdown-1 > ul.d-menu-1:not(.tap), section.skillset li.li-level-2.dropdown-2 > ul.d-menu-2:not(.tap) {
+  display: none;
+}
+section.skillset li.li-level-1:not(li.li-level-1.click):hover {
+  background-color: rgb(210, 142, 83);
+}
+section.skillset li.li-level-1.dropdown-1.click {
+  background-color: rgb(213, 165, 154);
+}
+section.skillset li.li-level-2:not(li.li-level-2.click):hover {
+  background-color: rgba(235, 206, 152, 0.5);
+}
+section.skillset li.li-level-2.dropdown-2.click {
+  background-color: rgb(145, 122, 124);
+}
+section.skillset li.li-level-3:not(li.li-level-3 *):hover {
+  background-color: rgba(210, 142, 83, 0.5);
+}
+
+/* THE CONTACT-ME FORM ----------------------------------------------------------------------*/
+div.contact-me {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  margin-bottom: 30px;
+  background-color: rgba(49, 44, 45, 0.92);
+  border: 2px solid rgb(235, 206, 152);
+  border-radius: 10px;
+  padding: 2rem;
+}
+div.contact-me h1.contact-me {
+  font-family: "Cinzel Decorative", cursive;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+}
+div.contact-me .feedback-input {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  border: 1px solid rgb(235, 206, 152);
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+div.contact-me .feedback-input::placeholder {
+  color: rgba(235, 206, 152, 0.3);
+}
+div.contact-me .feedback-input:focus {
+  box-shadow: 0 0 8px #fff;
+}
+div.contact-me textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+div.contact-me [type=submit] {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 600;
+  width: 100%;
+  background: rgba(210, 142, 83, 0.7);
+  color: white;
+  border: 1px solid rgb(235, 206, 152);
+  font-size: 1.7rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+div.contact-me [type=submit]:hover {
+  background: rgb(210, 142, 83);
+  box-shadow: 0 0 8px #fff;
+}
+
+/* Styling the button that takes us back to the top of the page ----------------------------- */
+body.about-me div.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid rgb(49, 44, 45);
+  background-color: rgb(49, 44, 45);
+  border-radius: 50%;
+  z-index: 0;
+}
+body.about-me div.back-to-top > a {
+  text-decoration: none;
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 5rem;
+  color: rgb(235, 206, 152);
+  text-align: right;
+}
+
+/*
+Import the "Dr Sugiyama" Google Font
+The usage of the font:
+    font-family: 'Dr Sugiyama', cursive;
+*/
+/*
+Import the "Noto Serif Japanese" Google Font.
+The usage of the font:
+    font-family: 'Noto Serif JP', serif;
+*/
+/*
+Import the "Cinzel Decorative" Google Font.
+The usage of the font:
+    font-family: 'Cinzel Decorative', cursive;
+*/
+/*
+Import the "Arimo" Google Font.
+The usage of the font:
+    font-family: 'Arimo', sans-serif;
+*/
+/*
+Import the "Pirata One" Google Font.
+The usage of the font:
+    font-family: "Pirata One", cursive;
+*/
+span.jp-insert {
+  font-family: "Noto Serif JP", serif;
+}
+
+header {
+  height: 120px;
+  width: 100vw;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 4rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 0px;
+  background: linear-gradient(to right, rgb(213, 165, 154), rgb(65, 71, 89));
+  border: 1px solid rgb(235, 206, 152);
+  color: rgb(49, 44, 45);
+}
+header > span {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 4.3rem;
+  color: #fff;
+  text-shadow: 5px 5px 5px rgb(49, 44, 45);
+}/*# sourceMappingURL=main.css.map */

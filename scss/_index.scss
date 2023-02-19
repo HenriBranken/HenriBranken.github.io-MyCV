@@ -1,0 +1,612 @@
+// $darkColor: rgba(49, 44, 45, 1);
+// $lightColor: rgba(235, 206, 152, 1);
+// $goldColor: rgba(210, 142, 83, 1);
+
+@function darkColor($alpha) {
+    @return rgba(49, 44, 45, $alpha);
+}
+
+@function lightColor($alpha) {
+    @return rgba(235, 206, 152, $alpha);
+}
+
+@function goldColor($alpha) {
+    @return rgba(210, 142, 83, $alpha);
+}
+
+@function pinkColor($alpha) {
+    @return rgba(213, 165, 154, $alpha);
+}
+
+@function pinkBlueColor($alpha) {
+    @return rgba(145, 122, 124, $alpha);
+}
+
+@function invertLight($alpha) {
+    @return rgba(20, 49, 103, $alpha);
+}
+
+body a:visited {
+    color: rgba(49, 44, 45, 1);
+}
+
+// Styling the background image of about-me.html
+section.about-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: repeat;
+    background-image: url("../images/traditional-mesh.jpg");
+    overflow: hidden;
+    background-attachment: fixed;
+    opacity: 1;
+    z-index: -10;
+}
+
+// Styling the rest of the page.
+div.about-rest-of-page {
+    @include wrap-content;
+}
+
+div.intro {
+    @include wrap-content;
+    position: relative;
+
+    &>h1 {
+        color: rgba(49, 44, 45, 1);
+        margin-bottom: 0.5rem;
+    }
+
+    /*+ is the adjacent sibling selector.*/
+    &>h1+p::first-letter {
+        color: lightColor(1);
+        background-color: darkColor(1);
+        border-radius: 2px;
+        box-shadow: 7px 7px 0 goldColor(1);
+        font-size: 3.5rem;
+        padding: 25px 10px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    &>p {
+        text-align: justify;
+        color: rgba(49, 44, 45, 1);
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-bottom: 1rem;
+
+        &>img {
+            float: right;
+            margin: 0 0 0 20px;
+            height: 250px;
+            border-radius: 5px;
+        }
+    }
+
+    /*Did you Know---------------------------------------------------------------------------*/
+
+    & section.dyk {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        right: -64px;
+        top: 150px;
+        margin-right: 0px;
+        transition: margin-right 500ms ease;
+
+        &>div.dyk-txt {
+            z-index: -1;
+            background-color: rgba(235, 206, 152, 1);
+            color: rgba(49, 44, 45, 1);
+            font-size: 1.4rem;
+            line-height: 52px;
+            padding: 0 10px;
+        }
+
+        &>div.dyk-btn>button {
+            cursor: pointer;
+
+            &>i.fa-language {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    /*LANGUAGES------------------------------------------------------------------------------*/
+    
+    & section.langs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /*----------------------------*/
+        position: absolute;
+        right: -52px;
+        top: 70px;
+        margin-right: 0px;
+        transition: margin-right 500ms ease;
+
+        &>div.langs-btn {
+            padding: 0;
+            margin: 0;
+
+            &>button {
+                cursor: pointer;
+                padding: 0;
+                margin: 0;
+
+                &>i.fa-circle-info {
+                    font-size: 3rem;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+
+        &>div.langs-txt {
+            z-index: -1;
+            background-color: rgba(235, 206, 152, 1);
+            color: rgba(49, 44, 45, 1);
+            font-size: 1.4rem;
+            line-height: 51px;
+            padding: 0 10px;
+        }
+    }
+}
+
+/*MERN ---------------------------------------------------------------------------------------*/
+$size: 185px;
+
+div.mern {
+    display: grid;
+    grid-template-columns: repeat(4, $size);
+    grid-gap: 10px 10px;
+    justify-items: center;
+    justify-content: center;
+
+    &>div.char {
+        transition: all 500ms ease;
+
+        &.active {
+            border: 1px solid #fff;
+            box-shadow: 0 0 15px #fff;
+        }
+    }
+
+    &>div.fig>img {
+        transition: all 500ms ease;
+
+        &.active {
+            border: 1px solid #fff;
+            box-shadow: 0 0 15px #fff;
+        }
+    }
+
+    &>div.char {
+        text-align: center;
+        margin: 0 0;
+        border-radius: 50%;
+        height: $size;
+        width: $size;
+        font-size: 6rem;
+        line-height: 11rem;
+        font-family: 'Cinzel Decorative', cursive;
+        transition: all 500ms ease;
+    }
+
+    &>div.char.m-char {
+        border-radius: 50%;
+        color: rgb(2, 52, 48);
+        background: radial-gradient(rgb(255, 255, 255), rgb(2, 52, 48));
+    }
+
+    &>div.char.e-char {
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        background: radial-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+    }
+
+    &>div.char.r-char {
+        border-radius: 50%;
+        color: rgba(0, 216, 255, 1);
+        background: radial-gradient(rgb(34, 34, 34), rgb(0, 216, 255));
+    }
+
+    &>div.char.n-char {
+        border-radius: 50%;
+        color: white;
+        background-color: rgb(59, 135, 57);
+        background: radial-gradient(rgb(59, 135, 57), rgb(255, 255, 255));
+    }
+
+    &>div.fig {
+        /*For pictures that have an intercepted background (MongoDB).*/
+        margin: 0 0;
+        height: $size;
+        width: $size;
+        transition: all 500ms ease;
+
+        &>img {
+            width: $size;
+            height: $size;
+            /*Effectively set the size of each image.*/
+            border-radius: 50%;
+        }
+    }
+}
+
+div.mern-wrapper {
+    @include wrap-content;
+    transition: all 500ms ease;
+}
+
+/*Full-Stack Title-------------------------------------------------------------------------- */
+div.fullstack {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &>div.fs {
+        font-weight: 900;
+        font-size: 2rem;
+        text-align: center;
+        width: 40px;
+    }
+
+    &>div.fs:nth-child(even) {
+        color: rgb(210, 142, 83);
+        background-color: rgba(49, 44, 45, 1);
+    }
+
+    &>div.fs:nth-child(odd) {
+        color: rgba(49, 44, 45, 1);
+        background-color: rgb(210, 142, 83);
+    }
+
+    &>div.fs.fs-04,
+    &>div.fs.fs-10 {
+        background-color: initial;
+        border: initial;
+    }
+}
+
+/* THE ACCORDION ---------------------------------------------------------------------------- */
+// Each career milestone is captured in `div.yyyy-entry`.
+div.yyyy-entry {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(49, 44, 45, 1);
+
+    &>div.yyyy-heading {
+        padding: 15px;
+        margin: 10px 0 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        cursor: pointer;
+
+        &.active {
+            border: 2px solid rgba(49, 44, 45, 1);
+        }
+
+        &>span {
+            font-size: 1.5rem;
+            font-weight: 900;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+            color: rgba(49, 44, 45, 1);
+        }
+    }
+
+    &>div.yyyy-description:not(.active) {
+        display: none;
+    }
+
+    &>div.yyyy-description {
+        padding: 15px;
+    }
+
+    &>div.yyyy-description>p,
+    &>div.yyyy-description>ul>li {
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 1.8rem;
+        color: rgba(49, 44, 45, 1);
+        text-align: justify;
+    }
+}
+
+/* THE NETWORKING ICONS --------------------------------------------------------------------- */
+// Styling for the right-hand sidebar containing all the social icons.
+section.network-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(235, 206, 152, 1);
+    border-left: 2px solid rgba(49, 44, 45, 1);
+    border-top: 2px solid rgba(49, 44, 45, 1);
+    border-bottom: 2px solid rgba(49, 44, 45, 1);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    &>div.network-icon {
+        padding: 20px;
+        transition: all 0.8s ease;
+
+        &>a {
+            text-decoration: none;
+            color: rgba(49, 44, 45, 1);
+            font-size: 2rem;
+        }
+
+        &:hover {
+            transform: rotate(720deg);
+        }
+    }
+}
+
+/* THE VERTICAL DROPDOWN MENU ----------------------------------------------------------------------- */
+
+section.skillset {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(235, 206, 152, 1);
+    width: 300px;
+    border-top: 2px solid rgba(49, 44, 45, 1);
+    border-right: 2px solid rgba(49, 44, 45, 1);
+    border-bottom: 2px solid rgba(49, 44, 45, 1);
+    border-top-right-radius: 30px;
+
+    & a {
+        text-decoration: none;
+        color: darkColor(1);
+    }
+
+    & h1.skillset {
+        border-top-right-radius: 28px;
+        font-size: 2.5rem;
+        padding: 10px;
+        border-bottom: 1px solid rgba(49, 44, 45, 1);
+        background-color: rgba(49, 44, 45, 1);
+        color: rgba(235, 206, 152, 1);
+    }
+
+    & ul,
+    & ul.d-menu-1,
+    & ul.d-menu-2 {
+        list-style: none;
+        /*Remove the bullet styling from all the <ul>s.*/
+    }
+
+    & ul:not(ul.d-menu-1, ul.d-menu-2) {
+        background-color: lightColor(1);
+    }
+
+    & ul.d-menu-1 {
+        background-color: goldColor(0.8);
+    }
+
+    & ul.d-menu-2 {
+        background-color: lightColor(1);
+    }
+
+    & li.li-level-1 {
+        letter-spacing: 0.3rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 50px;
+        padding: 0;
+        border-bottom: 1px dotted rgba(49, 44, 45, 1);
+        display: block;
+
+        &>a {
+            padding-left: 15px;
+        }
+
+        &.dropdown-1>a>i.fa.fa-angle-right.dropdown {
+            font-size: 15px;
+            position: absolute;
+            right: 0;
+            margin: 17px;
+            text-align: middle;
+            transition: transform 500ms ease;
+        }
+
+        &.dropdown-1>a>i.fa.fa-angle-right.dropdown.rotate {
+            transform: rotate(90deg);
+            transition: transform 500ms ease;
+        }
+    }
+
+    & li.li-level-2 {
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: 0rem;
+        text-transform: none;
+        font-weight: 470;
+        line-height: 40px;
+        padding: 0;
+
+        &.dropdown-2 {
+            font-weight: 900;
+        }
+
+        &>a {
+            padding-left: 30px;
+        }
+
+        &.dropdown-2>a>i.fa.fa-angle-right.dropdown {
+            font-size: 12px;
+            position: absolute;
+            right: 25px;
+            margin: 13px;
+            text-align: middle;
+            transition: transform 500ms ease;
+        }
+
+        &.dropdown-2>a>i.fa.fa-angle-right.dropdown.rotate {
+            font-size: 12px;
+            transform: rotate(90deg);
+            transition: transform 500ms ease;
+        }
+    }
+
+    & li.li-level-2:not(li.li-level-2 *) {
+        border-bottom: 1px solid darkColor(1);
+    }
+
+    & li.li-level-3 {
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: 0rem;
+        text-transform: none;
+        font-weight: 470;
+        line-height: 40px;
+        padding: 0;
+
+        &>a {
+            padding-left: 45px;
+        }
+    }
+
+    & li.li-level-3:not(li.li-level-3 *) {
+        border-bottom: 1px solid darkColor(1);
+    }
+
+    & li.li-level-1.dropdown-1>ul.d-menu-1:not(.tap),
+    & li.li-level-2.dropdown-2>ul.d-menu-2:not(.tap) {
+        display: none;
+    }
+
+    /*HOVERING EFFECTS------------------------------*/
+    & li.li-level-1:not(li.li-level-1.click):hover {
+        background-color: goldColor(1);
+    }
+
+    & li.li-level-1.dropdown-1.click {
+        background-color: pinkColor(1);
+    }
+
+    & li.li-level-2:not(li.li-level-2.click):hover {
+        background-color: lightColor(0.5);
+    }
+
+    & li.li-level-2.dropdown-2.click {
+        background-color: pinkBlueColor(1);
+    }
+
+    & li.li-level-3:not(li.li-level-3 *):hover {
+        background-color: goldColor(0.5);
+    }
+}
+
+/* THE CONTACT-ME FORM ----------------------------------------------------------------------*/
+
+div.contact-me {
+    margin-top: 30px;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-bottom: 30px;
+    background-color: rgba(49, 44, 45, 0.92);
+    border: 2px solid rgba(235, 206, 152, 1);
+    border-radius: 10px;
+    padding: 2rem;
+
+    h1.contact-me {
+        font-family: 'Cinzel Decorative', cursive;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        width: 100%;
+        outline: none;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        word-spacing: 0.5rem;
+    }
+
+    .feedback-input {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        border: 1px solid rgba(235, 206, 152, 1);
+        padding: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+
+        &::placeholder {
+            color: rgba(235, 206, 152, 0.3);
+        }
+
+        &:focus {
+            box-shadow: 0 0 8px #fff;
+        }
+    }
+
+    textarea {
+        height: 150px;
+        line-height: 150%;
+        resize: vertical;
+    }
+
+    [type="submit"] {
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: 600;
+        width: 100%;
+        background: rgba(210, 142, 83, 0.7);
+        color: white;
+        border: 1px solid rgba(235, 206, 152, 1);
+        font-size: 1.7rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        cursor: pointer;
+        transition: all 500ms linear;
+    }
+
+    [type="submit"]:hover {
+        background: rgba(210, 142, 83, 1);
+        box-shadow: 0 0 8px #fff;
+    }
+}
+
+/* Styling the button that takes us back to the top of the page ----------------------------- */
+
+body.about-me div.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid rgba(49, 44, 45, 1);
+    background-color: rgba(49, 44, 45, 1);
+    border-radius: 50%;
+    z-index: 0;
+
+    &>a {
+        text-decoration: none;
+        display: block;
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 5rem;
+        color: rgba(235, 206, 152, 1);
+        text-align: right;
+    }
+}

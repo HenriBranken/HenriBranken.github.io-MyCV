@@ -173,25 +173,33 @@ $(function () {
 
     /*WaniKani Did-You-Know-------------------------------------------------------------------*/
     let $dyk = $('section.dyk');
+    let $dykI = $('section.dyk > div.dyk-btn')
+    let dykClicks = 0;
 
-    $dyk.on('mouseover', function () 
+    $dykI.on('click', function () 
     {
-        $dyk.css({'margin-right': '-273px'});
-    })
-    $dyk.on('mouseout', function () 
-    {
-        $dyk.css({'margin-right': '0px'});
-    })
+        if (!(dykClicks%2)) {
+            $dyk.css({'margin-right': '-273px'});
+        }
+        else {
+            $dyk.css({'margin-right': '0px'});
+        }
+        dykClicks++;
+    });
 
     /*Fluent Languages-------------------------------------------------------------------*/
     let $langs = $('section.langs');
+    let $langsI = $('section.langs > div.langs-btn');
+    let langsClicks = 0;
 
-    $langs.on('mouseover', function () 
+    $langsI.on('click', function () 
     {
-        $langs.css({'margin-right': '-312px'});
-    })
-    $langs.on('mouseout', function () 
-    {
-        $langs.css({'margin-right': '0px'});
-    })
+        if(!(langsClicks%2)) {
+            $langs.css({'margin-right': '-312px'});
+        }
+        else {
+            $langs.css({'margin-right': '0px'});
+        }
+        langsClicks++;
+    });
 });

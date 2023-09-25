@@ -285,6 +285,9 @@ div.yyyy-entry > div.yyyy-description > p, div.yyyy-entry > div.yyyy-description
   color: rgb(49, 44, 45);
   text-align: justify;
 }
+div.yyyy-entry > div.yyyy-description > p > ul#dev-portfolio > li > a:hover, div.yyyy-entry > div.yyyy-description > p > ul#dev-portfolio > li > a:visited {
+  color: black;
+}
 
 /* THE NETWORKING ICONS --------------------------------------------------------------------- */
 section.network-me {

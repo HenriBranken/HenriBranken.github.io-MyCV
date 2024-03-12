@@ -559,6 +559,10 @@ Import the "Pirata One" Google Font.
 The usage of the font:
     font-family: "Pirata One", cursive;
 */
+li:not(:last-child) {
+  margin-bottom: 11px;
+}
+
 span.jp-insert {
   font-family: "Noto Serif JP", serif;
 }

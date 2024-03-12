@@ -1,38 +1,36 @@
 @import "./config";
 @import "./index";
 
-
 /*
 Import the "Dr Sugiyama" Google Font
 The usage of the font:
     font-family: 'Dr Sugiyama', cursive;
 */
-@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap");
 /*
 Import the "Noto Serif Japanese" Google Font.
 The usage of the font:
     font-family: 'Noto Serif JP', serif;
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap");
 /*
 Import the "Cinzel Decorative" Google Font.
 The usage of the font:
     font-family: 'Cinzel Decorative', cursive;
 */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
 /*
 Import the "Arimo" Google Font.
 The usage of the font:
     font-family: 'Arimo', sans-serif;
 */
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap");
 /*
 Import the "Pirata One" Google Font.
 The usage of the font:
     font-family: "Pirata One", cursive;
 */
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 $pinkColor: rgba(213, 165, 154, 1);
 $brownColor: rgba(235, 206, 152, 1);
@@ -40,26 +38,30 @@ $blueColor: rgba(65, 71, 89, 1);
 $darkBlue: rgba(49, 44, 45, 1);
 // The styling for the top navigation bar.
 
+li:not(:last-child) {
+  margin-bottom: 11px;
+}
+
 span.jp-insert {
-    font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
 }
 
 header {
-    height: 120px;
-    width: 100vw;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 4rem;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px 0px;
-    background: linear-gradient(to right, $pinkColor, $blueColor);
-    border: 1px solid $brownColor;
-    color: $darkBlue;
+  height: 120px;
+  width: 100vw;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 4rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 0px;
+  background: linear-gradient(to right, $pinkColor, $blueColor);
+  border: 1px solid $brownColor;
+  color: $darkBlue;
 
-    & > span {
-        font-family: 'Cinzel Decorative', cursive;
-        font-size: 4.3rem;
-        color: #fff;
-        text-shadow: 5px 5px 5px $darkBlue;
-    }
+  & > span {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 4.3rem;
+    color: #fff;
+    text-shadow: 5px 5px 5px $darkBlue;
+  }
 }
